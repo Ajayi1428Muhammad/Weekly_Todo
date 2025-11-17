@@ -155,7 +155,11 @@ button {
     font-size: 16px;
   }
 
-  button {
+  /* only make page-related action buttons full-width on small screens
+     (avoid affecting global buttons like the back button) */
+  .page button,
+  .add-task-btn,
+  #weekListPage > button {
     width: 100%;
     padding: 12px;
     border-radius: 12px;

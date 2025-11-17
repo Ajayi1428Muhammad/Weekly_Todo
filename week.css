@@ -65,7 +65,9 @@
     font-size: 15px;
   }
 
-  button {
+  /* only make page-related buttons full-width here (avoid stretching back button) */
+  .page button,
+  .add-task-btn {
     width: 100%;
     padding: 10px 12px;
     border-radius: 10px;
@@ -79,4 +81,19 @@
 }
 .task-input::placeholder {
   color: rgba(0, 39, 101, 0.5);
+}
+
+/* Keep the back button compact on narrow screens so it matches desktop look */
+.back-btn {
+  white-space: nowrap;
+  padding: 8px 12px;
+  width: auto;
+}
+
+@media (max-width: 480px) {
+  .back-btn {
+    align-self: center;
+    margin-left: 8px;
+    padding: 8px 12px;
+  }
 }
