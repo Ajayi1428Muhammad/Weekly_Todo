@@ -1,4 +1,14 @@
 /* Styles for the day lists on week.html - copied from .week-list in style.css */
+.container {
+  /* ensure week view container centers the card if week.css is applied after style.css */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+.todo-app {
+  margin: auto;
+}
 .day-list li {
   /* text-transform: capitalize; */
   list-style: none;
@@ -82,7 +92,6 @@
 .task-input::placeholder {
   color: rgba(0, 39, 101, 0.5);
 }
-
 
 @media (max-width: 480px) {
   .back-btn {

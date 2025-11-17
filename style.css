@@ -8,13 +8,18 @@
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(135deg, #153677, #4e085f);
-  padding: 10px;
+  /* center the app both vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
 }
 .todo-app {
   width: 100%;
   max-width: 540px;
   background-color: #fff;
-  margin: 100px auto 20px;
+  /* center via parent flex; remove large top margin that cut off card on small screens */
+  margin: auto;
   padding: 30px 40px 80px;
   border-radius: 10px;
 }
