@@ -1,0 +1,43 @@
+/* Styles for the day lists on week.html - copied from .week-list in style.css */
+.day-list li {
+  /* text-transform: capitalize; */
+  list-style: none;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  font-size: 17px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+}
+.day-list li::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  height: 28px;
+  width: 28px;
+  top: 10px;
+  left: 8px;
+}
+.day-list li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+.day-list li.checked::before {
+  background-image: url(images/checked.png);
+}
+.day-list li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  border-radius: 50%;
+}
+.day-list li span:hover {
+  color: red;
+  transition: all 0.3s ease-in-out 0.1s;
+}

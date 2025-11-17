@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container add-week-page">
+    <div class="todo-app">
+        <h2>to-do-list <img src="images/icon.png" alt=""></h2>
+        <!-- <h3>plan a week ahead</h3> -->
+        <div id="weekListPage" class="active page ">
+            <input type="text" id="input-box" class="task-input" placeholder="Name the week...">
+            <button onclick="addWeek()">add a week</button>
+        </div>
+            <ul id="list-container" class="week-list">
+                <!-- <li class="checked" >task</li><span>&times;</span> -->
+                <!-- <li>task</li>
+                <li>task</li> -->
+            </ul>
+        </div> 
+    </div>
+ </div>
+<script src="script.js"></script>
+</body>
+</html>

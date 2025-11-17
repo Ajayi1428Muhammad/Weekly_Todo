@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  padding: 10px;
+}
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background-color: #fff;
+  margin: 100px auto 20px;
+  padding: 30px 40px 80px;
+  border-radius: 10px;
+}
+
+.align {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo-app h2 {
+  color: #002765;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.todo-app img {
+  width: 30px;
+  margin-left: 10px;
+}
+.todo-app h3 {
+  color: #002765;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.page {
+  display: none;
+  display: flex;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.page.active {
+  display: flex;
+}
+.page.hidden {
+  display: none;
+}
+.task-input {
+  /* text-transform: capitalize; */
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: lighter;
+}
+
+button {
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  padding: 16px 40px;
+  border-radius: 30px;
+  font-weight: bold;
+  background: red;
+  cursor: pointer;
+}
+
+.week-list li {
+  border-radius: 10px;
+  list-style: none;
+  padding: 12px 8px 15px;
+  user-select: none;
+  font-size: 17px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+}
+
+.week-list li.checked::before {
+  background-image: url(images/checked.png);
+}
+.week-list li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  border-radius: 50%;
+}
+.week-list li span:hover {
+  color: red;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+  
+.hidden {
+  display: none;
+}
+
+/* make inner .day containers flex so their .task-input children can flex */
+/* .page .day  .task-input{
+   text-transform: capitalize;
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: lighter;
+} */

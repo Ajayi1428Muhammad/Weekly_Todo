@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Week View</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="week.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo-app">
+        <div class="align">
+          <h2
+            class="week-title"
+            style="
+              margin: 0;
+              margin-right: auto;
+              font-size: 1.1rem;
+              font-weight: 600;
+              color: #002765;
+              text-transform: capitalize;
+            "
+          >
+            Week
+          </h2>
+          <button
+          id="backBtn"
+          class="back-btn"
+          style="
+              background: linear-gradient(
+                135deg,
+                #2c18ad 0%,
+                #6b4ef1 50%,
+                #84e3ff 100%
+              );
+              color: #fff;
+              border: none;
+              padding: 10px 16px;
+              border-radius: 8px;
+              box-shadow: 0 6px 18px rgba(76, 70, 255, 0.2);
+              cursor: pointer;
+              margin-left: auto;
+              transition: transform 0.12s ease, box-shadow 0.12s ease;
+            "
+          >
+            &leftarrow; Back
+          </button>
+        </div>
+
+        <!-- Seven day sections -->
+        <div class="days">
+          <h3 style="margin-top: 20px">Monday</h3>
+          <div class="page">
+            <input
+              class="task-input day-input"
+              data-day="monday"
+              placeholder="plan the day..."
+            />
+            <button class="add-task-btn" data-day="monday">add task</button>
+          </div>
+          <ul class="day-list" data-day="monday"></ul>
+
+          <h3 style="margin-top: 20px">Tuesday</h3>
+          <div class="page">
+            <input
+              class="task-input day-input"
+              data-day="tuesday"
+              placeholder="plan the day..."
+            />
+            <button class="add-task-btn" data-day="tuesday">add task</button>
+          </div>
+          <ul class="day-list" data-day="tuesday"></ul>
+
+          <h3 style="margin-top: 20px">Wednesday</h3>
+          <div class="page">
+            <input
+              class="task-input day-input"
+              data-day="wednesday"
+              placeholder="plan the day..."
+            />
+            <button class="add-task-btn" data-day="wednesday">add task</button>
+          </div>
+          <ul class="day-list" data-day="wednesday"></ul>
+
+          <h3 style="margin-top: 20px">Thursday</h3>
+          <div class="page">
+            <input
+              class="task-input day-input"
+              data-day="thursday"
+              placeholder="plan the day..."
+            />
+            <button class="add-task-btn" data-day="thursday">add task</button>
+          </div>
+          <ul class="day-list" data-day="thursday"></ul>
+
+          <h3 style="margin-top: 20px">Friday</h3>
+          <div class="page">
+            <input
+              class="task-input day-input"
+              data-day="friday"
+              placeholder="plan the day..."
+            />
+            <button class="add-task-btn" data-day="friday">add task</button>
+          </div>
+          <ul class="day-list" data-day="friday"></ul>
+
+          <h3 style="margin-top: 20px">Saturday</h3>
+          <div class="page">
+            <input
+              class="task-input day-input"
+              data-day="saturday"
+              placeholder="plan the day..."
+            />
+            <button class="add-task-btn" data-day="saturday">add task</button>
+          </div>
+          <ul class="day-list" data-day="saturday"></ul>
+
+          <h3 style="margin-top: 20px">Sunday</h3>
+          <div class="page">
+            <input
+              class="task-input day-input"
+              data-day="sunday"
+              placeholder="plan the day..."
+            />
+            <button class="add-task-btn" data-day="sunday">add task</button>
+          </div>
+          <ul class="day-list" data-day="sunday"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="week.js"></script>
+  </body>
+</html>
