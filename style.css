@@ -47,7 +47,8 @@
   display: flex;
   background: #edeef0;
   border-radius: 30px;
-  padding-left: 20px;
+  /* use symmetric padding so children don't overflow the rounded container */
+  padding: 8px 12px;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 25px;
@@ -64,15 +65,24 @@
   border: none;
   outline: none;
   background: transparent;
-  padding: 10px;
-  font-weight: lighter;
+  /* ensure input can shrink inside flex (prevents overflow) */
+  min-width: 0;
+  padding: 10px 12px;
+  font-weight: normal; /* stronger weight so placeholder/text is clearer */
+  color: #002765;
+}
+
+/* clearer placeholder color for better legibility */
+.task-input::placeholder {
+  color: rgba(0, 39, 101, 0.5);
 }
 
 button {
   text-transform: capitalize;
   border: none;
   outline: none;
-  padding: 16px 40px;
+  /* slightly smaller horizontal padding to avoid pushing out of container */
+  padding: 12px 28px;
   border-radius: 30px;
   font-weight: bold;
   background: red;
@@ -106,7 +116,7 @@ button {
   color: red;
   transition: all 0.3s ease-in-out 0.1s;
 }
-  
+
 .hidden {
   display: none;
 }
@@ -121,3 +131,33 @@ button {
   padding: 10px;
   font-weight: lighter;
 } */
+
+/* Responsive fixes for the input + button inside .page on small screens */
+@media (max-width: 480px) {
+  .todo-app {
+    margin: 40px 12px;
+    padding: 20px;
+  }
+
+  .page {
+    flex-direction: column;
+    align-items: stretch; /* make children take full width */
+    padding: 8px 12px;
+    gap: 10px;
+  }
+
+  /* allow the input to shrink properly inside flex containers */
+  .page .task-input {
+    flex: none;
+    width: 100%;
+    min-width: 0; /* prevents overflow in some browsers */
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+  }
+}

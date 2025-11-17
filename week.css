@@ -41,3 +41,42 @@
   color: red;
   transition: all 0.3s ease-in-out 0.1s;
 }
+
+/* Responsive fixes for the week page (stack day input/button and keep lists tidy on small screens) */
+@media (max-width: 480px) {
+  .day-list li {
+    padding: 12px 8px 12px 12px; /* reduce left padding so items fit */
+    font-size: 16px;
+  }
+
+  /* if week.html/shared markup uses .page + .task-input like index.html, stack them */
+  .page {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 8px 10px;
+  }
+
+  .task-input {
+    flex: none;
+    width: 100%;
+    min-width: 0;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+  }
+}
+
+/* Make placeholder and input text more legible in week view (if inputs are present) */
+.task-input {
+  color: #002765;
+  font-weight: normal;
+}
+.task-input::placeholder {
+  color: rgba(0, 39, 101, 0.5);
+}
