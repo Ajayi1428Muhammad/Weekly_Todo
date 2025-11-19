@@ -53,9 +53,9 @@
 }
 
 /* Responsive fixes for the week page (stack day input/button and keep lists tidy on small screens) */
-@media (max-width: 480px) {
+@media (max-width: 560px) {
   .day-list li {
-    padding: 12px 8px 12px 12px; /* reduce left padding so items fit */
+    padding: 12px auto 12px; /* reduce left padding so items fit */
     font-size: 16px;
   }
 
